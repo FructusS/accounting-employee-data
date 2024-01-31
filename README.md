@@ -1,2 +1,12 @@
-# accounting-employee-data
-This is a practice test task based on a [NAUKA] [C# DEV]
+Это тренировочная работа для тестового задания [NAUKA] [C# DEV] - <a href="https://drive.google.com/file/d/1GNwTfoJCQD0Ec3JXkWmzaYuIY6DnWnEa/view">ссылка</a>
+
+Это приложение, позволяющее управлять учетными
+данными сотрудников (создавать, редактировать, просматривать список и
+детали, удалять).
+
+Технологии:
+- C#
+- ASP NET CORE
+- WPF
+
+

@@ -6,7 +6,7 @@
 
 Технологии:
 - C#
-- ASP NET CORE
+- ASP.NET Core
 - WPF
 
 

@@ -7,9 +7,31 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{04F3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{A2A9D55B-1D30-4C3C-9533-725BB1203B96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingEmployeeData.API", "Backend\AccountingEmployeeData.API\AccountingEmployeeData.API.csproj", "{BFF0CC53-5F72-423D-B588-2808CE58E248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingEmployeeData.Domain", "Backend\AccountingEmployeeData.Domain\AccountingEmployeeData.Domain.csproj", "{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFF0CC53-5F72-423D-B588-2808CE58E248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF0CC53-5F72-423D-B588-2808CE58E248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF0CC53-5F72-423D-B588-2808CE58E248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF0CC53-5F72-423D-B588-2808CE58E248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFF0CC53-5F72-423D-B588-2808CE58E248} = {04F3614C-C09B-48AC-9A5E-E45D5C4F3390}
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A} = {04F3614C-C09B-48AC-9A5E-E45D5C4F3390}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C89E1F3-2830-485B-B8FD-DCA05223D4D2}

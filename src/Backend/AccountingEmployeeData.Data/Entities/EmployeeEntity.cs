@@ -1,6 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace AccountingEmployeeData.Data.Enities
+﻿namespace AccountingEmployeeData.Data.Entities
 {
     public class EmployeeEntity
     {

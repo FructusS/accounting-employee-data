@@ -1,6 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace AccountingEmployeeData.Domain.Models
+﻿namespace AccountingEmployeeData.Domain.Models
 {
     public class Employee
     {
@@ -8,7 +6,7 @@ namespace AccountingEmployeeData.Domain.Models
         public string LastName { get; set; }
         public string Patronymic { get; set; }
 
-        public Date Birthday { get; set; }
+        public DateOnly Birthday { get; set; }
 
         public string Address { get; set; }
 

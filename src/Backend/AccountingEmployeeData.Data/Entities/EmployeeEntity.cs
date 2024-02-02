@@ -9,7 +9,7 @@ namespace AccountingEmployeeData.Data.Enities
         public string LastName { get; set; }
         public string Patronymic { get; set; }
 
-        public Date Birthday { get; set; }
+        public DateOnly Birthday { get; set; }
 
         public string Address { get; set; }
 

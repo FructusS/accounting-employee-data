@@ -1,4 +1,5 @@
-﻿using AccountingEmployeeData.Application.Extensions;
+﻿using AccountingEmployeeData.Application.Exceptions;
+using AccountingEmployeeData.Application.Extensions;
 using AccountingEmployeeData.Data;
 using AccountingEmployeeData.Data.Entities;
 using AccountingEmployeeData.Domain.Models;

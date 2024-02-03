@@ -10,9 +10,9 @@ namespace AccountingEmployeeData.Application;
 public class EmployeeRepository
 {
 
-    private readonly ApplicationContext _context;
+    private readonly ApplicationDbContext _context;
     
-    public EmployeeRepository(ApplicationContext context)
+    public EmployeeRepository(ApplicationDbContext context)
     {
         _context = context;
     }

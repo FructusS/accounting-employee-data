@@ -21,12 +21,15 @@ namespace AccountingEmployeeData.API.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("{id:guid}")]
         public async Task<ActionResult> Get(Guid id)
         {
             if (id == null)
             {
-                return BadRequest(); 
+                return BadRequest(new
+                {
+                    Error = $"{nameof(id)} is null"
+                });
             }
             return  Ok(await _service.Get(id));
         }

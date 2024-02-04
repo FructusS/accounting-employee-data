@@ -9,6 +9,7 @@ public static class EmployeeExtension
     {
         return new Employee
         {
+            Id = entity.Id,
             FirstName = entity.FirstName,
             LastName = entity.LastName,
             Patronymic = entity.Patronymic,

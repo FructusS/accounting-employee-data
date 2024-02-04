@@ -30,6 +30,19 @@ namespace AccountingEmployeeData.API.Controllers
             }
             return  Ok(await _service.Get(id));
         }
+        [HttpPost]
+        public async Task<ActionResult> Create([FromBody] EmployeeDto employee)
+        {
+            if (employee == null)
+            {
+                return BadRequest(new
+                {
+                    Error = $"{nameof(employee)} is null"
+                });
+            }
+            return Ok(await _service.Create(employee));
+        }
+        
         
         [HttpPut("{id:guid}")]
         public async Task<ActionResult> Update(Guid id,[FromBody] EmployeeDto employee)

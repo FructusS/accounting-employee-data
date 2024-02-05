@@ -7,9 +7,55 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{04F3
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{A2A9D55B-1D30-4C3C-9533-725BB1203B96}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountingEmployeeData.API", "Backend\AccountingEmployeeData.API\AccountingEmployeeData.API.csproj", "{BFF0CC53-5F72-423D-B588-2808CE58E248}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountingEmployeeData.Domain", "Backend\AccountingEmployeeData.Domain\AccountingEmployeeData.Domain.csproj", "{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingEmployeeData.Data", "Backend\AccountingEmployeeData.Data\AccountingEmployeeData.Data.csproj", "{EE07376D-BC52-4AE3-AA46-BA51D077F59D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingEmployeeData.Application", "Backend\AccountingEmployeeData.Application\AccountingEmployeeData.Application.csproj", "{E5AF931D-B5AB-458D-903F-6629EEFECE8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{FFE7B819-FF7F-4137-A8D2-F28BA7A65643}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingEmployeeData.Desktop", "Frontend\Desktop\AccountingEmployeeData.Desktop\AccountingEmployeeData.Desktop.csproj", "{AB7DDA36-FC4B-4904-84D2-DAC2483196E2}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BFF0CC53-5F72-423D-B588-2808CE58E248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF0CC53-5F72-423D-B588-2808CE58E248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF0CC53-5F72-423D-B588-2808CE58E248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF0CC53-5F72-423D-B588-2808CE58E248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE07376D-BC52-4AE3-AA46-BA51D077F59D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE07376D-BC52-4AE3-AA46-BA51D077F59D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE07376D-BC52-4AE3-AA46-BA51D077F59D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE07376D-BC52-4AE3-AA46-BA51D077F59D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5AF931D-B5AB-458D-903F-6629EEFECE8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5AF931D-B5AB-458D-903F-6629EEFECE8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5AF931D-B5AB-458D-903F-6629EEFECE8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5AF931D-B5AB-458D-903F-6629EEFECE8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB7DDA36-FC4B-4904-84D2-DAC2483196E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB7DDA36-FC4B-4904-84D2-DAC2483196E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB7DDA36-FC4B-4904-84D2-DAC2483196E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB7DDA36-FC4B-4904-84D2-DAC2483196E2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFF0CC53-5F72-423D-B588-2808CE58E248} = {04F3614C-C09B-48AC-9A5E-E45D5C4F3390}
+		{35265636-A2B8-42BE-B9B5-D6CEC3FD8B8A} = {04F3614C-C09B-48AC-9A5E-E45D5C4F3390}
+		{EE07376D-BC52-4AE3-AA46-BA51D077F59D} = {04F3614C-C09B-48AC-9A5E-E45D5C4F3390}
+		{E5AF931D-B5AB-458D-903F-6629EEFECE8C} = {04F3614C-C09B-48AC-9A5E-E45D5C4F3390}
+		{FFE7B819-FF7F-4137-A8D2-F28BA7A65643} = {A2A9D55B-1D30-4C3C-9533-725BB1203B96}
+		{AB7DDA36-FC4B-4904-84D2-DAC2483196E2} = {FFE7B819-FF7F-4137-A8D2-F28BA7A65643}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C89E1F3-2830-485B-B8FD-DCA05223D4D2}

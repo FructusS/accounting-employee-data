@@ -11,7 +11,7 @@ namespace AccountingEmployeeData.Desktop
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new MainViewModel();
+            DataContext = new MainViewModel(new EventAggregator());
         }
     }
 }

@@ -19,8 +19,27 @@ public class MainViewModel : BaseViewModel
         }
     }
     
+    
+    private readonly IEventAggregator _eventAggregator;
+    public MainViewModel(IEventAggregator eventAggregator)
+    {
+        _eventAggregator = eventAggregator;
+        CurrentPage = new EmployeeListViewModel(_eventAggregator);
+
+        _eventAggregator.GetEvent<NavigateToCreateEmployeeEvent>().Subscribe(NavigateToCreateEmployee);
+    }
+
     public MainViewModel()
     {
-        CurrentPage = new EmployeeListViewModel();
+        
+    }
+    private void NavigateToCreateEmployee()
+    {
+        CurrentPage = new EmployeeViewModel(_eventAggregator);
+    }   
+    private void NavigateToEditEmployee()
+    {
+        CurrentPage = new EmployeeViewModel(_eventAggregator, null);
     }
 }
+

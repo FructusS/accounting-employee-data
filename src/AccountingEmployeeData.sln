@@ -19,6 +19,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{FFE7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingEmployeeData.Desktop", "Frontend\Desktop\AccountingEmployeeData.Desktop\AccountingEmployeeData.Desktop.csproj", "{AB7DDA36-FC4B-4904-84D2-DAC2483196E2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{53A1DED6-2569-4271-B155-07D10CBEC361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountingEmployeeData.Models", "Shared\AccountingEmployeeData.Models\AccountingEmployeeData.Models.csproj", "{F33F701D-5196-4D45-A60D-DFC423D101DA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,10 @@ Global
 		{AB7DDA36-FC4B-4904-84D2-DAC2483196E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB7DDA36-FC4B-4904-84D2-DAC2483196E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB7DDA36-FC4B-4904-84D2-DAC2483196E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33F701D-5196-4D45-A60D-DFC423D101DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33F701D-5196-4D45-A60D-DFC423D101DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33F701D-5196-4D45-A60D-DFC423D101DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33F701D-5196-4D45-A60D-DFC423D101DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +64,7 @@ Global
 		{E5AF931D-B5AB-458D-903F-6629EEFECE8C} = {04F3614C-C09B-48AC-9A5E-E45D5C4F3390}
 		{FFE7B819-FF7F-4137-A8D2-F28BA7A65643} = {A2A9D55B-1D30-4C3C-9533-725BB1203B96}
 		{AB7DDA36-FC4B-4904-84D2-DAC2483196E2} = {FFE7B819-FF7F-4137-A8D2-F28BA7A65643}
+		{F33F701D-5196-4D45-A60D-DFC423D101DA} = {53A1DED6-2569-4271-B155-07D10CBEC361}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C89E1F3-2830-485B-B8FD-DCA05223D4D2}

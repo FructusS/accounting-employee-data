@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Shared\AccountingEmployeeData.Models\AccountingEmployeeData.Models.csproj" />
     <ProjectReference Include="..\AccountingEmployeeData.Application\AccountingEmployeeData.Application.csproj" />
     <ProjectReference Include="..\AccountingEmployeeData.Data\AccountingEmployeeData.Data.csproj" />
   </ItemGroup>

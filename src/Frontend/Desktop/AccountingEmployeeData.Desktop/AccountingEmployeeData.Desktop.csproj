@@ -18,10 +18,26 @@
     <ItemGroup>
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
       <PackageReference Include="Prism.Core" Version="7.2.0.1422" />
+      <PackageReference Include="SharpVectors" Version="1.8.3" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Backend\AccountingEmployeeData.Domain\AccountingEmployeeData.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Resources\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\Icons\ic_edit.svg" />
+      <Resource Include="Resources\Icons\ic_edit.svg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
+      <None Remove="Resources\Icons\ic_trash.svg" />
+      <Resource Include="Resources\Icons\ic_trash.svg">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Resource>
     </ItemGroup>
 
 </Project>

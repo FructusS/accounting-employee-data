@@ -26,9 +26,22 @@ public class EmployeeListViewModel : BaseViewModel
         }
     }
 
-    public EmployeeListViewModel()
-    { 
-        LoadEmployeeList();
+    private readonly IEventAggregator _eventAggregator;
+    public DelegateCommand<object> DeleteEmployeeCommand { get; private set;}
+    public DelegateCommand OnNavigateToCreateEmployeeCommand { get; private set;}
+    
+    
+    public EmployeeListViewModel(IEventAggregator eventAggregator)
+    {
+        _eventAggregator = eventAggregator;
+        GetEmployeeListAsync();
+        DeleteEmployeeCommand = new DelegateCommand<object>(DeleteEmployeeAsync);
+        OnNavigateToCreateEmployeeCommand = new DelegateCommand(OnNavigateToCreateEmployee);
+    }
+
+    private void OnNavigateToCreateEmployee()
+    {
+        _eventAggregator.GetEvent<NavigateToCreateEmployeeEvent>().Publish();
     }
     private async void DeleteEmployeeAsync(object id)
     {

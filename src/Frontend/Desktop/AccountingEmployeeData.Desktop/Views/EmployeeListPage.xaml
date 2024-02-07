@@ -87,5 +87,9 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
+        
+        <Button Grid.Row="1">
+            <Button Content="Create" Command="{Binding OnNavigateToCreateEmployeeCommand}"></Button>
+        </Button>
     </Grid>
 </ContentControl>

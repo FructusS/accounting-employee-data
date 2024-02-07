@@ -3,7 +3,7 @@
                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-                xmlns:local="clr-namespace:AccountingEmployeeData.Desktop.ViewModels"
+                xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
                 mc:Ignorable="d">
     <Grid>
         <Grid.RowDefinitions>
@@ -34,15 +34,56 @@
             </ListBox.ItemsPanel>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <Border BorderBrush="WhiteSmoke" BorderThickness="0,0,0,1">
-                        <DockPanel HorizontalAlignment="Stretch">
-                            <DockPanel>
-                                <TextBlock Padding="2" Text="{Binding LastName}" 
-                                           FontWeight="Bold" DockPanel.Dock="Left"/>
-                                <TextBlock DockPanel.Dock="Left" Padding="2" Text="{Binding FirstName}" TextWrapping="Wrap"/>
-                            </DockPanel>
-                        </DockPanel>
-                    </Border>
+                    <DockPanel HorizontalAlignment="Center">
+                        <Border HorizontalAlignment="Stretch"
+                                MaxWidth="300"
+                                BorderThickness="0 0 0 0"
+                                BorderBrush="LightGray"
+                                Width="200">
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock Padding="2" 
+                                           TextWrapping="Wrap" 
+                                           HorizontalAlignment="Center">
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} {1} {2}">
+                                            <Binding Path="FirstName" />
+                                            <Binding Path="Patronymic" />
+                                            <Binding Path="LastName" />
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                                
+                                <TextBlock Text="{Binding Birthday , StringFormat='{}{0:dd/MM/yyyy}'}"></TextBlock>
+                                <TextBlock Text="{Binding Address}"></TextBlock>
+                                <TextBlock Text="{Binding Department, StringFormat=Department - {0}}"></TextBlock>
+
+                                <StackPanel Orientation="Horizontal" 
+                                            HorizontalAlignment="Stretch">
+                                    <Button Cursor="Hand" 
+                                            HorizontalAlignment="Left" 
+                                            Padding="4" 
+                                            Margin="4">
+                                        <Image Margin="4"
+                                               Source="{svgc:SvgImage Source=../Resources/Icons/ic_edit.svg}"
+                                               Height="24" Width="24" />
+                                    </Button>
+                                    <Button Cursor="Hand"
+                                            HorizontalAlignment="Right"
+                                            Padding="4"
+                                            Margin="4"
+                                            CommandParameter="{Binding Id}"
+                                            Command="{Binding DataContext.DeleteEmployeeCommand, ElementName=EmployeeListBox}">
+                                        <Image Margin="4"
+                                               Source="{svgc:SvgImage Source=../Resources/Icons/ic_trash.svg}"
+                                               Height="24" Width="24" />
+                                    </Button>
+                                </StackPanel>
+                            </StackPanel>
+
+                        </Border>
+                    </DockPanel>
+
+
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>

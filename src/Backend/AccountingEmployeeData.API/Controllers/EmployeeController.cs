@@ -66,5 +66,18 @@ namespace AccountingEmployeeData.API.Controllers
         {
             return  Ok(await _service.GetList());
         }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            if (id == null)
+            {
+                return BadRequest(new ErrorResponse
+                {
+                    Error = $"{nameof(id)} is null"
+                });
+            }
+            return Ok(await _service.Delete(id));
+        }
     }
 }

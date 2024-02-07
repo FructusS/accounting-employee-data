@@ -6,6 +6,10 @@
                 xmlns:local="clr-namespace:AccountingEmployeeData.Desktop.ViewModels"
                 mc:Ignorable="d">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
         <ListBox ItemsSource="{Binding EmployeeList}" Margin="5"
                  x:Name="EmployeeListBox"
                  ScrollViewer.HorizontalScrollBarVisibility="Disabled">

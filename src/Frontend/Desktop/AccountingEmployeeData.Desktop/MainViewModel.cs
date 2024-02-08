@@ -1,6 +1,7 @@
 using System;
 using AccountingEmployeeData.Desktop.Events;
 using AccountingEmployeeData.Desktop.ViewModels;
+using AccountingEmployeeData.Domain.Models;
 using Prism.Events;
 
 namespace AccountingEmployeeData.Desktop;
@@ -27,6 +28,13 @@ public class MainViewModel : BaseViewModel
         CurrentPage = new EmployeeListViewModel(_eventAggregator);
 
         _eventAggregator.GetEvent<NavigateToCreateEmployeeEvent>().Subscribe(NavigateToCreateEmployee);
+        _eventAggregator.GetEvent<NavigateToEditEmployeeEvent>().Subscribe(NavigateToEditEmployee);
+        _eventAggregator.GetEvent<NavigateToEmployeeListEvent>().Subscribe(NavigateToEmployeeList);
+    }
+//TODO мб переделать навигацию(статик стек с BaseViewModel)
+    private void NavigateToEmployeeList()
+    {
+        CurrentPage = new EmployeeListViewModel(_eventAggregator);
     }
 
     public MainViewModel()
@@ -37,9 +45,9 @@ public class MainViewModel : BaseViewModel
     {
         CurrentPage = new EmployeeViewModel(_eventAggregator);
     }   
-    private void NavigateToEditEmployee()
+    private void NavigateToEditEmployee(Employee employee)
     {
-        CurrentPage = new EmployeeViewModel(_eventAggregator, null);
+        CurrentPage = new EmployeeViewModel(_eventAggregator, employee);
     }
 }
 

@@ -11,7 +11,7 @@ using Prism.Events;
 
 namespace AccountingEmployeeData.Desktop.ViewModels;
 
-public class EmployeeListViewModel : BaseViewModel
+public class EmployeeListViewModel : BaseFormViewModel
 {
 
     private List<Employee> _employeeList;

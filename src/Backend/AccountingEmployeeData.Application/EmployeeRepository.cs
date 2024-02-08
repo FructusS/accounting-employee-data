@@ -55,15 +55,10 @@ public class EmployeeRepository
 
     public async Task<Guid> Update(Guid id, EmployeeDto employeeDto)
     {
-        var employee = await _context.Employees.FindAsync(id);
-        if (employee == null)
-        {
-            throw new NotFoundException($"{nameof(Employee)} not found");
-        }
 
-        await _context.Employees
+        await _context.Employees.Where(x => x.Id == id)
             .ExecuteUpdateAsync(e => e
-                .SetProperty(p => p.Birthday, p => employeeDto.Birthday)
+                .SetProperty(p => p.Birthday, p  => employeeDto.Birthday)
                 .SetProperty(p => p.FirstName, p => employeeDto.FirstName)
                 .SetProperty(p => p.LastName, p => employeeDto.LastName)
                 .SetProperty(p => p.Department, p => employeeDto.Department)

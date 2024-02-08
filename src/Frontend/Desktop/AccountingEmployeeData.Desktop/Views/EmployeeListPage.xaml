@@ -62,6 +62,8 @@
                                     <Button Cursor="Hand" 
                                             HorizontalAlignment="Left" 
                                             Padding="4" 
+                                            CommandParameter="{Binding .}"
+                                            Command="{Binding DataContext.EditEmployeeCommand, ElementName=EmployeeListBox}"
                                             Margin="4">
                                         <Image Margin="4"
                                                Source="{svgc:SvgImage Source=../Resources/Icons/ic_edit.svg}"

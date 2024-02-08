@@ -28,6 +28,7 @@ public class EmployeeListViewModel : BaseViewModel
 
     private readonly IEventAggregator _eventAggregator;
     public DelegateCommand<object> DeleteEmployeeCommand { get; private set;}
+    public DelegateCommand<object> EditEmployeeCommand { get; private set;}
     public DelegateCommand OnNavigateToCreateEmployeeCommand { get; private set;}
     
     
@@ -36,7 +37,20 @@ public class EmployeeListViewModel : BaseViewModel
         _eventAggregator = eventAggregator;
         GetEmployeeListAsync();
         DeleteEmployeeCommand = new DelegateCommand<object>(DeleteEmployeeAsync);
+        EditEmployeeCommand = new DelegateCommand<object>(OnNavigateToEditEmployee);
         OnNavigateToCreateEmployeeCommand = new DelegateCommand(OnNavigateToCreateEmployee);
+    }
+
+    private void OnNavigateToEditEmployee(object obj)
+    {
+        if (obj is Employee employee)
+        {
+            _eventAggregator.GetEvent<NavigateToEditEmployeeEvent>().Publish(employee);
+        }
+        else
+        {
+            throw new Exception($"{obj} is not Employee");
+        }
     }
 
     private void OnNavigateToCreateEmployee()

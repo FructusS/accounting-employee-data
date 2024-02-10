@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AccountingEmployeeData.Application;
 using AccountingEmployeeData.Domain.Models;
+using AccountingEmployeeData.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,7 +27,7 @@ namespace AccountingEmployeeData.API.Controllers
         {
             if (id == null)
             {
-                return BadRequest(new
+                return BadRequest(new ErrorResponse
                 {
                     Error = $"{nameof(id)} is null"
                 });
@@ -38,7 +39,7 @@ namespace AccountingEmployeeData.API.Controllers
         {
             if (employee == null)
             {
-                return BadRequest(new
+                return BadRequest(new ErrorResponse
                 {
                     Error = $"{nameof(employee)} is null"
                 });
@@ -52,7 +53,7 @@ namespace AccountingEmployeeData.API.Controllers
         {
             if (id == null || employee == null)
             {
-                return BadRequest(new
+                return BadRequest(new ErrorResponse
                 {
                     Error = $"{nameof(id)} or {nameof(employee)} is null"
                 }); 
@@ -64,6 +65,19 @@ namespace AccountingEmployeeData.API.Controllers
         public async Task<ActionResult> Get()
         {
             return  Ok(await _service.GetList());
+        }
+
+        [HttpDelete("{id:guid}")]
+        public async Task<ActionResult> Delete(Guid id)
+        {
+            if (id == null)
+            {
+                return BadRequest(new ErrorResponse
+                {
+                    Error = $"{nameof(id)} is null"
+                });
+            }
+            return Ok(await _service.Delete(id));
         }
     }
 }

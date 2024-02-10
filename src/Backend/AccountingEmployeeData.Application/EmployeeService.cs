@@ -30,4 +30,10 @@ public class EmployeeService
     {
         return await _repository.Create(employeeDto);
     }
+    
+    public async Task<Guid> Delete(Guid id)
+    {
+        return await _repository.Delete(id);
+    }
+
 }

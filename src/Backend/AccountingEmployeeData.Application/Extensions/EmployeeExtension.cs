@@ -15,7 +15,8 @@ public static class EmployeeExtension
             Patronymic = entity.Patronymic,
             Birthday = entity.Birthday,
             Address = entity.Address,
-            Department = entity.Department
+            Department = entity.Department,
+            Description = entity.Description
         };
     }
 }
